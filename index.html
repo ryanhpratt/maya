@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="-webkit-overflow-scrolling: touch;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maya Musical Measurement Converter by Ryan Pratt</title>
+    <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/turbine.css">
+</head>
+<body>
+
+<img id="turbine" src="img/Maya_L2.png" width="619px" height="619px">
+
+<div class="Maya_L1">
+    <img src="img/Maya_L1.png" width="494px" height="494px">
+</div>
+
+<div class="Maya_L3">
+    <img src="img/Maya_L3.png" width="643px" height="643px">
+</div>
+
+
+<script src="src/propeller.js"></script>
+<script>
+    var propeller = new Propeller(document.getElementById('turbine'), {
+        inertia: 0.89,
+        angle: 30
+    });
+
+    setTimeout(function(){
+        propeller.unbind();
+        console.log('Propeller unbinded');
+    }, 2000);
+
+    setTimeout(function(){
+        propeller.bind();
+        console.log('Propeller binded');
+    }, 4000);
+</script>
+</body>
+</html>
